@@ -1,0 +1,26 @@
+ String empty = new String();
+
+ String partA = new String();
+ 
+ for(int i =0;i<word.length();i++){
+
+  if(word.substring(i,i+1).equals(!)||word.substring(i,i+1).equals(" ")){
+
+      String partA = "";
+
+    }
+
+    string partA = (i,i+1);
+    empty = empty+partA;
+
+ }
+
+ word = empty
+
+ //
+
+   if(word.substring(i,i+1).equals(!)||word.substring(i,i+1).equals("")){
+
+      string partA = ""
+
+    }
