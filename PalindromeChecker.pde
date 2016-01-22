@@ -1,3 +1,4 @@
+
 public void setup()
 {
   String lines[] = loadStrings("palindromes.txt");
@@ -14,11 +15,10 @@ public void setup()
     }
   }
 }
+public String getRid(String word){
 
-public boolean palindrome(String word)
-{
-//get rid of annoying stuff in original
-
+//get rid of annoying stuff 
+//getRid
 String emptyA = new String();
 String newbA = new String();
  
@@ -33,19 +33,19 @@ String newbA = new String();
     else {newbA = word.substring(i,i+1);}
     
     emptyA = emptyA + newbA;   
- 
  }
- 
 
+return emptyA;
+}
 
-//actual palindrome code
- int last = word.length()-1;
+public String reversal(String word) {
 
- String pal = new String();
-
- String empty = new String();
-
- String partA = new String();
+  //actual palindrome code
+  //pal stuff
+int last = word.length()-1;
+String pal = new String();
+String empty = new String();
+String partA = new String();
  
 
  for(int i = last;i>-1;i--){
@@ -63,26 +63,21 @@ String newbA = new String();
     pal = pal+newLetter;
 
   }
-// get rid of annoying pal
+  return pal;
+}
+public boolean palindrome(String word)
+{
 
-String emptyB = new String();
-String newbB = new String();
- 
- 
- for(int i =0; i<word.length(); i++){
-    
-    if(pal.substring(i,i+1).equals(" ")||pal.substring(i,i+1).equals("!")||pal.substring(i,i+1).equals("'")||pal.substring(i,i+1).equals(",")){
-    
-      newbB = "";
-    
-    }
-    else {newbB = pal.substring(i,i+1);}
-    
-    emptyB = emptyB + newbB;   
- 
- }
+  String emptyX = new String();
+  String emptyY = new String();
 
-  if (emptyB.equalsIgnoreCase(emptyA)) {
+  emptyX = word;
+  emptyY = reversal(word);
+
+  emptyX = getRid(emptyX);
+  emptyY = getRid(emptyY);
+
+  if (emptyX.equalsIgnoreCase(emptyY)) {
 
     return true;
     
